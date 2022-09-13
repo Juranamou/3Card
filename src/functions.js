@@ -1,5 +1,3 @@
-
-
 var input = "4 0 Qd Ad 4c 1 Kd 5d 6d 2 Tc Jc 5c 3 5h 4h Th"
 
 var map = {
@@ -24,7 +22,7 @@ var map = {
     '1': 1
 };
 
-function threeCardPoker(input) {
+export function threeCardPoker(input) {
     // create a storage array that contains the player scores
     var scores = Array(Number(input[0])).fill(0);
     // reformat the data to make it easier to work with
