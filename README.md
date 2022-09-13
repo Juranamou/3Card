@@ -16,6 +16,7 @@ To get started simply run 'npm start' to start the application on localhost:3000
 Expected solution: 2
 
 4
+<div style="page-break-after: always"></div>
 0 Qc Kc 4s
 <div style="page-break-after: always"></div>
 1 Ah 2c Js
