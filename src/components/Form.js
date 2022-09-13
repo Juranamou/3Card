@@ -10,7 +10,7 @@ export default function Form() {
     return (
     <div className='form-wrapper'>
         <form onSubmit={(e) => handleSubmit(e)}>
-            <input type="text" onChange={(e) => {setInput(e.target.value)}}></input>
+            <input type="text" onChange={(e) => {setInput(e.target.value)}} required></input>
             <input type="submit"></input>
         </form>
     </div>
