@@ -6,8 +6,11 @@ To get started simply run 'npm start' to start the application on localhost:3000
 ### Example datasets:
 
 3
+<div style="page-break-after: always"></div>
 0 2c As 4d
+<div style="page-break-after: always"></div>
 1 Kd 5h 6c
+<div style="page-break-after: always"></div>
 2 Jc Jd 9s
 
 Expected solution: 2
