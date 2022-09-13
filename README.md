@@ -17,8 +17,11 @@ Expected solution: 2
 
 4
 0 Qc Kc 4s
+<div style="page-break-after: always"></div>
 1 Ah 2c Js
+<div style="page-break-after: always"></div>
 2 3h 9h Th
+<div style="page-break-after: always"></div>
 3 Tc 9c 3c
 
 Expected solution: 2 3
