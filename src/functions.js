@@ -1,61 +1,41 @@
-var input = "4 0 Qd Ad 4c 1 Kd 5d 6d 2 Tc Jc 5c 3 5h 4h Th"
-
-var map = {
-    'StFlush': 19,
-    '3Kind': 18,
-    'Straight': 17,
-    'Flush': 16,
-    'Pair': 15,
-    'A': 14,
-    'K': 13,
-    'Q': 12,
-    'J': 11,
-    'T': 10,
-    '9': 9,
-    '8': 8,
-    '7': 7,
-    '6': 6,
-    '5': 5,
-    '4': 4,
-    '3': 3,
-    '2': 2,
-    '1': 1
-};
-
 export function threeCardPoker(input) {
+
     // create a storage array that contains the player scores
     var scores = Array(Number(input[0])).fill(0);
     // reformat the data to make it easier to work with
     var reformat = reformatter(input);
 
-    console.log(JSON.stringify(reformat));
     // loop throught the formatted data checking for scores
     for (var i = 0; i < reformat.length; i++) {
+        // check for straight flush
         if (isStraight(reformat[i]) && isFlush(reformat[i])) {
             scores[i] = map['StFlush'];
             continue;
         }
+        // check for three of a kind
         if (ThreeKind(reformat[i])) {
             scores[i] = map['3Kind'];
             continue;
         }
+        // check for a straight
         if (isStraight(reformat[i])) {
             scores[i] = map['Straight'];
             continue;
         }
+        // check for a flush
         if (isFlush(reformat[i])) {
             scores[i] = map['Flush'];
             continue;
         }
+        // check for a pair
         if (isPair(reformat[i])) {
             scores[i] = map['Pair'];
             continue;
         } else {
+            // check the highest card
             scores[i] = highCard(reformat[i]);
         }
     }
-    console.log(scores);
-    console.log(checkWinner(scores));
     return checkWinner(scores);
 }
 
@@ -96,7 +76,6 @@ function isPair(player) {
     }
 }
 function highCard(player) {
-    console.log(player);
     var values = [];
     for (var i = 0; i < player.length; i += 2) {
         values.push(map[player[i]]);
@@ -111,5 +90,24 @@ function checkWinner(scores) {
     )
     return indexes.join();
 }
-
-threeCardPoker(input);
+var map = {
+    'StFlush': 19,
+    '3Kind': 18,
+    'Straight': 17,
+    'Flush': 16,
+    'Pair': 15,
+    'A': 14,
+    'K': 13,
+    'Q': 12,
+    'J': 11,
+    'T': 10,
+    '9': 9,
+    '8': 8,
+    '7': 7,
+    '6': 6,
+    '5': 5,
+    '4': 4,
+    '3': 3,
+    '2': 2,
+    '1': 1
+};
