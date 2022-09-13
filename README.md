@@ -5,7 +5,7 @@ To get started simply run 'npm start' to start the application on localhost:3000
 
 ### Example datasets:
 
-3. 
+3
 <div style="page-break-after: always"></div>
 0 2c As 4d
 <div style="page-break-after: always"></div>
@@ -15,7 +15,7 @@ To get started simply run 'npm start' to start the application on localhost:3000
 
 Expected solution: 2
 
-4. 
+4
 <div style="page-break-after: always"></div>
 0 Qc Kc 4s
 <div style="page-break-after: always"></div>
