@@ -1,7 +1,6 @@
 ### 3 Card Poker Game
-Provide an input, click submit, and the website will provide which player is the winner. Example inputs and solutions below.
-<div style="page-break-after: always"></div>
-To get started simply run 'npm start' to start the application on localhost:3000
+Provide an input, click submit, and the website will provide which player is the winner. Example inputs and solutions below.<br>
+To get started install dependencies with 'npm install' then simply run 'npm start' to start the application on localhost:3000
 
 ### Example datasets:
 
