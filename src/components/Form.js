@@ -9,7 +9,6 @@ export default function Form() {
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(input);
         setWinner(threeCardPoker(input));
     }
 
