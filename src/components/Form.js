@@ -15,10 +15,10 @@ export default function Form() {
     return (
     <div className='form-wrapper'>
         <form onSubmit={(e) => handleSubmit(e)}>
-            {winner && <div>Winner is Player {winner}!</div>}
-            <input type="text" onChange={(e) => {setInput(e.target.value)}} required></input>
+            <input className='form-input' type="text" onChange={(e) => {setInput(e.target.value)}} required></input>
             <input type="submit"></input>
         </form>
+        {winner && <div className='alert'>Winner is Player {winner}!</div>}
     </div>
     )
 }

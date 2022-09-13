@@ -1,8 +1,16 @@
 .form-wrapper{
-  /* background-color: blue; */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   flex-direction: column;
+}
+
+.form-input{
+ width: 500px;
+}
+
+.alert{
+  margin-top: 50px;
+  font-size: 50px;
 }
