@@ -1,6 +1,6 @@
 
 
-var input = "3 0 Qc As Kd 1 Kd 5h 6c 2 Jc Jd 9s"
+var input = "3 0 Qd Ad Kd 1 Kd 5d 6d 2 Jc Jd Js"
 
 var map = {
     'StFlush': 19,
@@ -38,8 +38,21 @@ function threeCardPoker(input){
     }
     console.log(JSON.stringify(reformat));
     for (var i = 0; i < reformat.length; i++) {
+        if( isStraight(reformat[i]) && isFlush(reformat[i])) {
+            scores[i] = map['StFlush'];
+            continue;
+        }
+        if (ThreeKind(reformat[i])) {
+            scores[i] = map['3Kind'];
+            continue;
+        } 
         if (isStraight(reformat[i])) {
             scores[i] = map['Straight'];
+            continue;
+        } 
+        if (isFlush(reformat[i])) {
+            scores[i] = map['Flush'];
+            continue;
         }
     }
     console.log(scores);
@@ -56,6 +69,16 @@ function isStraight(player){
     }
 }
 
-// function isFlush()
+function isFlush(player){
+    if (player[1] === player[3] && player[3] === player[5]) {
+        return true;
+    }
+}
+
+function ThreeKind(player) {
+   if (player[0] === player[2] && player[2] === player[4]) {
+    return true;
+   }
+}
 
 threeCardPoker(input);
